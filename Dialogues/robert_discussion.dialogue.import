@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b15l1lk0bm84b"
+path="res://.godot/imported/robert_discussion.dialogue-363a7818624bde6235f932d321412133.tres"
+
+[deps]
+
+source_file="res://Dialogues/robert_discussion.dialogue"
+dest_files=["res://.godot/imported/robert_discussion.dialogue-363a7818624bde6235f932d321412133.tres"]
+
+[params]
+
+defaults=true

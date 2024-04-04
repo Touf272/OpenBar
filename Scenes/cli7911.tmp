@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b207clcxbmxfa"]
+
+[ext_resource type="Script" path="res://Scripts/client_manager.gd" id="1_x8kf3"]
+[ext_resource type="PackedScene" uid="uid://hhymr7dc346m" path="res://Scenes/dialogue.tscn" id="2_tp2cc"]
+
+[node name="Client_manager" type="Node2D"]
+script = ExtResource("1_x8kf3")
+
+[node name="Dialogue" parent="." instance=ExtResource("2_tp2cc")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1

@@ -1,0 +1,16 @@
+{
+	"1": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/start.png",
+		"name": "citron"
+	},
+
+	"2": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "orange"
+	},
+
+    "3": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "vanille"
+	}
+}

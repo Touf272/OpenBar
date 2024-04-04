@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dubr2ne410gmk"
+path="res://.godot/imported/Christelle_discussion.dialogue-c92183fbe0d210577f1d88b3031edc5a.tres"
+
+[deps]
+
+source_file="res://Dialogues/Christelle_discussion.dialogue"
+dest_files=["res://.godot/imported/Christelle_discussion.dialogue-c92183fbe0d210577f1d88b3031edc5a.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,24 @@
+~ Christelle_node
+
+Christelle: Hello, I would like a wine cup please. I am late today, so please hurry
+while (Global.Drink_Served == "Nothing")
+	[wait=0.8]
+	set Global.wait_time += 1
+	if (Global.wait_time == 8 or Global.wait_time == 16):
+		Christelle: [[Please, I told you that I'm hurry !|What takes you so much time ??|Whatever you do, do it faster !]]
+		set Global.reputation_level -= 5
+	if (Global.wait_time == 25)
+		Christelle: This takes too much time !
+		set Global.reputation_level -= 10
+		=> END
+if Global.Drink_Served == "wine":
+	Christelle: Thank you
+	set Global.reputation_level += 5
+	=> END
+if Global.Drink_Served == "whiskey"
+	Christelle: Wow, I can't believe you gave me my favorite drink ! Thamk you so much !
+	set Global.reputation_level += 25
+	=> END
+Christelle: I don't want to drink that !
+set Global.reputation_level -= 10
+=> END

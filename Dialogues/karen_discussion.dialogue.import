@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cofx61vi68p15"
+path="res://.godot/imported/karen_discussion.dialogue-0ffdb193b32c36275d97feca8c2dce36.tres"
+
+[deps]
+
+source_file="res://Dialogues/karen_discussion.dialogue"
+dest_files=["res://.godot/imported/karen_discussion.dialogue-0ffdb193b32c36275d97feca8c2dce36.tres"]
+
+[params]
+
+defaults=true

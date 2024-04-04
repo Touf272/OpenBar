@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlgsd1gv6w8pe"]
+
+[ext_resource type="PackedScene" uid="uid://d0kj5moxr8e4q" path="res://Scenes/bartender.tscn" id="1_ce160"]
+[ext_resource type="Texture2D" uid="uid://dtq417uwl0ysa" path="res://Assets/Placeholder_bar.png" id="1_ivvx1"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_qg48b"]
+[ext_resource type="Texture2D" uid="uid://dmqwy7iibxkce" path="res://Assets/bar_placeholder.jpg" id="2_y6ics"]
+[ext_resource type="PackedScene" uid="uid://b1p3yadaedjjj" path="res://Scenes/pause_menu.tscn" id="4_olso1"]
+[ext_resource type="PackedScene" uid="uid://b207clcxbmxfa" path="res://Scenes/client_manager.tscn" id="5_ctxdm"]
+[ext_resource type="PackedScene" uid="uid://yb8g48vkjupj" path="res://Scenes/bottle.tscn" id="7_4fsho"]
+[ext_resource type="PackedScene" path="res://Scenes/Bottle_Point.tscn" id="8_0v1eq"]
+[ext_resource type="Texture2D" uid="uid://bgrjgmt4ncyeg" path="res://Assets/bottles/wine1.png" id="9_3q6bd"]
+[ext_resource type="PackedScene" path="res://Scenes/glass.tscn" id="9_nc26m"]
+[ext_resource type="Texture2D" uid="uid://cvgs7r2k66lfx" path="res://Assets/bottles/whiskey2.png" id="10_ly8vl"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(206, 31)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_qg48b")
+
+[node name="bar" type="Sprite2D" parent="."]
+position = Vector2(638, 495)
+scale = Vector2(0.729677, 0.738457)
+texture = ExtResource("2_y6ics")
+
+[node name="Bartender" parent="." instance=ExtResource("1_ce160")]
+
+[node name="PlaceholderBar" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 577)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_ivvx1")
+
+[node name="Pause_Menu" parent="." instance=ExtResource("4_olso1")]
+
+[node name="Client_manager" parent="." instance=ExtResource("5_ctxdm")]
+
+[node name="Node2D" parent="." instance=ExtResource("9_nc26m")]
+
+[node name="Bottle" parent="." instance=ExtResource("7_4fsho")]
+position = Vector2(43, 89)
+alcool_id = "wine"
+
+[node name="win" type="Sprite2D" parent="Bottle"]
+scale = Vector2(4, 4)
+texture = ExtResource("9_3q6bd")
+
+[node name="Bottle2" parent="." instance=ExtResource("7_4fsho")]
+position = Vector2(38, 230)
+alcool_id = "whiskey"
+
+[node name="whiskey" type="Sprite2D" parent="Bottle2"]
+position = Vector2(2.38419e-07, -9.53674e-07)
+scale = Vector2(4, 4)
+texture = ExtResource("10_ly8vl")
+
+[node name="Bottle_Point" parent="." instance=ExtResource("8_0v1eq")]
+position = Vector2(186, 88)
+
+[node name="Bottle_Point2" parent="." instance=ExtResource("8_0v1eq")]
+position = Vector2(114, 88)
+
+[node name="Bottle_Point3" parent="." instance=ExtResource("8_0v1eq")]
+position = Vector2(42, 88)
+
+[node name="Bottle_Point4" parent="." instance=ExtResource("8_0v1eq")]
+position = Vector2(258, 88)

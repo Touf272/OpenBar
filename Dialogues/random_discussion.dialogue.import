@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dsvf355b574g3"
+path="res://.godot/imported/random_discussion.dialogue-8e50dcbec08af791c486118b3a3026d3.tres"
+
+[deps]
+
+source_file="res://Dialogues/random_discussion.dialogue"
+dest_files=["res://.godot/imported/random_discussion.dialogue-8e50dcbec08af791c486118b3a3026d3.tres"]
+
+[params]
+
+defaults=true

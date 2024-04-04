@@ -1,0 +1,42 @@
+~ random_discussion_init
+
+{{Global.ClientName}}: [[Hi|Hello|Hey]], [[I would like a|could you please give me a|I will take a]][[ fast | ]]{{Global.Command[0]}} with {{Global.Command[1]}} [[.| please.]]
+=> random_middle
+=> END!
+
+~ restart_node
+
+set Global.Command = ["Nothing", "Nothing"]
+set Global.Drink_Served = ["Nothing", "Nothing"]
+
+=> END!
+
+
+~ chitchat
+{{Global.ClientName}}: [[I know someone named Robert, he really like drinking beers with his friends !|Watch out for Karens, they really mess with your reputation !| Soon, I will go to Spain for vacation.|I really dislike this weather, I feel depressed when it rains.|I noticed this scotch bottle behind you, it looks very expensive !|Do you know if there is a concert somewhere ?|I like trains.|Never gonna give you up|I am hungry right now.|What do you want me to do ?|My wife drank all my drinks at home, that's why i'm here !|I wish i could have some times for me you know ?| my friends are very funny.|Christelle likes to get a hot chocolate, even when she asks for a coffee]]
+set Global.reputation_level += 0.4
+=> random_middle
+
+~ random_middle
+
+if (Global.Drink_Served[0] == "Nothing" or Global.Drink_Served[1] == "Nothing")
+	- What was it again ?
+		{{Global.ClientName}}: [[A|I want a|I said|Just a|Something like a|I would like a]] {{Global.Command[0]}} with {{Global.Command[1]}}[[.|, and faster !| !|, please.|, but don't mind me.| please !]]
+		set Global.reputation_level -= 2
+		=> random_middle
+	- discuss
+		=> chitchat
+if ((Global.Command[0] != Global.Drink_Served[0] and Global.Command[0] != Global.Drink_Served[1]) or (Global.Command[1] != Global.Drink_Served[0] and Global.Command[1] != Global.Drink_Served[1])):
+	{{Global.ClientName}}: [[I didn't ask for this !|I don't want this !|Is this a joke ?!!| I won't recommend you to my friends !]] 
+	set Global.reputation_level -= 15
+	=> restart_node
+	=> END
+if ((Global.Command[0] == Global.Drink_Served[0] or Global.Command[0] == Global.Drink_Served[1]) and (Global.Command[1] == Global.Drink_Served[0] or Global.Command[1] == Global.Drink_Served[1])):
+	{{Global.ClientName}}: [[Thank you !|This was fast !|Here's what i like !|Thanks xo| I will come back with a few friends next time !| This service was excellent !]]
+	set Global.reputation_level += 15
+	if (Global.reputation_level > Global.MAX_REPUTATION)
+		set Global.reputation_level == Global.MAX_REPUTATION
+	=> restart_node
+	=> END
+
+=> END!

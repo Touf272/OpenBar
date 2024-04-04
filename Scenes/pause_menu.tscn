@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1p3yadaedjjj"]
+
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_hwv4q"]
+
+[node name="Pause_Menu" type="Node2D"]
+position = Vector2(362, 260)
+script = ExtResource("1_hwv4q")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 433.0
+offset_bottom = 105.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume game"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Main_menu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back to main menu"
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Main_menu" to="." method="_on_main_menu_button_down"]

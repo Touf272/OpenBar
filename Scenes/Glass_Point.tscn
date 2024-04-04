@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy0nud20wdamx"]
+
+[ext_resource type="Script" path="res://Scripts/Bottle_Point.gd" id="1_wl4r3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iabxd"]
+
+[node name="Glass_Point" type="StaticBody2D" groups=["glass"]]
+script = ExtResource("1_wl4r3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_iabxd")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

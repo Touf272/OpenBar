@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://cag4u3tqd04gy"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_1k1bh"]
+
+[resource]
+script = ExtResource("1_1k1bh")
+starts = {
+"Client1": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(173, 125),
+"start_id": "Client1"
+},
+"1_1": {
+"dialogue": "[wait time=1 speed=50]Coucou c'est moi le premier client",
+"offset": Vector2(420, 120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 241),
+"speaker": "Client1"
+},
+"1_2": {
+"dialogue": "Là je dis encore un truc c'est fou",
+"offset": Vector2(800, 140),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 241),
+"speaker": "Client1"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

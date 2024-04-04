@@ -1,0 +1,41 @@
+~ karen_discussion
+
+Karen: give me a whiskey, and fast !
+=> first_node
+
+~ first_node
+
+while (Global.Drink_Served == "Nothing")
+	[wait=1.0]
+	Karen: [[I'm a custom in my right, I want that drink NOW !|Your people are slower than my car !|You are the worst bartender I've never see.|You are ugly !|I'm still waiting...| Wow, you are so bad at this job !| Take my advice, quit your job.]]
+	set Global.Karen_wait += 1
+	if (Global.Karen_wait == 20)
+		Karen: Well, you failed miserably. You are too slow for this. Git gud
+		set Global.reputation_level -= 20
+		=> END
+if (Global.Drink_Served != "whiskey"):
+	Karen: Wait, this is not what I asked for. You are so dumb you can't even memorize what i'm saying ??!
+	set Global.reputation_level -= 20
+	=> END
+Karen: I changed my mind, now I want a mojito !
+set Global.Karen_wait = 10
+=> second_node
+
+
+~ second_node
+
+while (Global.Drink_Served == "Nothing")
+	[wait=1.0]
+	Karen: [[I'm a custom in my right, I want that drink NOW !|Your people are slower than my car !|You are the worst bartender I've never see.|You are ugly !|I'm still waiting...| Wow, you are so bad at this job !| Take my advice, quit your job.]]
+	Global.Karen_wait += 1
+	if (Global.Karen_wait == 20)
+		Karen: Well, you failed miserably. You are too slow for this. Git gud
+		set Global.reputation_level -= 20
+		=> END
+if (Global.Drink_Served != "mojito"):
+	Karen: Wait, this is not what I asked for. You are so dumb you can't even memorize what i'm saying ??!
+	set Global.reputation_level -= 20
+	=> END
+Karen: Wow, I have waited ages for a single drink !
+set Global.reputation_level += 5
+=> END

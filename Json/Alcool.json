@@ -1,0 +1,20 @@
+{
+	"1": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "whiskey"
+	},
+
+    "2": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "wine"
+	},
+
+    "3": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "champagne"
+	},
+	"4": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "rhum"
+	},
+}

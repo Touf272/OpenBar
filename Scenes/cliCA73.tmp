@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dak63d20ioy2"]
+
+[ext_resource type="Texture2D" uid="uid://cuei6fufrr8gf" path="res://Assets/Placeholder_bartender.png" id="1_5eukr"]
+[ext_resource type="Script" path="res://Scripts/client.gd" id="1_6bcff"]
+
+[node name="Client" type="Node2D"]
+modulate = Color(1, 0.992157, 0.454902, 1)
+position = Vector2(15, -174)
+script = ExtResource("1_6bcff")
+
+[node name="PlaceholderBartender" type="Sprite2D" parent="."]
+position = Vector2(135, 308)
+texture = ExtResource("1_5eukr")

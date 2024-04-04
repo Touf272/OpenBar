@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfkxxj405p4vb"]
+
+[ext_resource type="Script" path="res://Scripts/order.gd" id="1_woq84"]
+[ext_resource type="Texture2D" uid="uid://gpbvn6q1454a" path="res://Assets/Placerholder_order_box.png" id="2_j37h2"]
+
+[node name="Order" type="Node2D"]
+visible = false
+script = ExtResource("1_woq84")
+
+[node name="OrderFrame" type="TextureRect" parent="."]
+offset_left = 64.0
+offset_top = 136.0
+offset_right = 422.0
+offset_bottom = 492.0
+scale = Vector2(0.6, 0.23)
+texture = ExtResource("2_j37h2")
+
+[node name="Alcool1" type="RichTextLabel" parent="."]
+offset_left = 80.0
+offset_top = 144.0
+offset_right = 336.0
+offset_bottom = 176.0
+text = "Alcool 1 : "
+
+[node name="Alcool2" type="RichTextLabel" parent="."]
+offset_left = 80.0
+offset_top = 184.0
+offset_right = 336.0
+offset_bottom = 216.0
+text = "Alcool 2 : "
+
+[node name="Fruit" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 80.0
+offset_top = 224.0
+offset_right = 336.0
+offset_bottom = 256.0
+text = "Fruit : "

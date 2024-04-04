@@ -1,0 +1,22 @@
+{
+	"1": {
+		"sprite": "res://Assets/Placeholder_bartender.png",
+		"dialogue file": "res://Dialogues/Client1.tres",
+		"next": "2"
+	},
+	"2": {
+		"sprite": "res://Assets/Placeholder_bartender.png",
+		"dialogue file": "",
+		"next": "3"
+	},
+	"3": {
+		"sprite": "res://Assets/Placeholder_bartender.png",
+		"dialogue file": "",
+		"next": "4"
+	},
+	"4": {
+		"sprite": "res://Assets/Placeholder_bartender.png",
+		"dialogue file": "",
+		"next": "NULL"
+	}
+}

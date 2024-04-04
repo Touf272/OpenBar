@@ -1,0 +1,21 @@
+{
+	"1": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/start.png",
+		"name": "orange"
+	},
+
+	"2": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "menthe"
+	},
+
+    "3": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "fraise"
+	},
+
+    "4": {
+		"sprite": "res://ASSETS/SPRITES/Upgrades/upgrade1.png",
+		"name": "sucre"
+	}
+}

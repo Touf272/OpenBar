@@ -1,0 +1,47 @@
+~ Robert_node
+
+Robert: Hello, Could I have a beer please ?
+while (Global.Drink_Served == "Nothing")
+	[wait=1.0]
+if (Global.Drink_Served == "beer"):
+	=> Robert_minigame
+Robert: That's not what i asked !
+set Global.reputation_level -= 10
+=> END
+
+~ Robert_minigame
+
+Robert: <drinks the whole beer in a second>\n AGAIN !
+
+- that's enough
+	Robert's Friends: Aaaw, you're not fHey]], [[I would like a|could you please give me a|I will take a]][[ fast | ]]{{Global.Command}}[[.| please.]]
+=> END!
+
+~ restart_node
+
+- continue to serve him
+	=> robert_minigame_main_loop
+=> END
+
+~ robert_win
+set Global.Drink_Served = "Nothing"
+Robert's Friends: [[This is so fun !|One more lets go !| Let him cook !| Robert is the best !]]
+set Global.reputation_level += 5.5
+=> Robert_minigame
+
+~ robert_lose
+set Global.Drink_Served = "Nothing"
+Robert's Friends: Robert seems to be in a bad shape...
+<Robert vomits on you>
+Robert's Friends: [[We should go, fast !|I think we need to leave !| I may be time to run...|Serpentine, Serpentine !!]]
+set Global.reputation_level -= 20
+=> END
+
+~ robert_minigame_main_loop
+while (Global.Drink_Served == "Nothing")
+	[wait=1.0]
+if (Global.Drink_Served == "beer"):
+	%5 => robert_win
+	%3 => robert_lose
+if (Global.Drink_Served != "beer")
+	Robert: sToP PlayInG witH Me !
